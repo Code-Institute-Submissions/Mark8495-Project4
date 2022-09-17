@@ -15,3 +15,13 @@ class Preptime(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Mealtime(models.Model):
+    "Django Model of Preparation time database"
+    title = models.CharField(max_length=250, default='breakfast', unique=True, null=True)
+    slug = models.SlugField(max_length=250, default='breakfast', unique=True, null=True)
+    mealtime_image = CloudinaryField("mealtime", blank=True)
+
+    def __str__(self):
+        return self.title
