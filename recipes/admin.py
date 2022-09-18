@@ -7,7 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Preptime)
 class PreptimeAdmin(admin.ModelAdmin):
     """
-    Ability to manage categories in admin
+    Ability to manage preptime in admin
     """
     list_display = ('title', 'slug')
     prepopulated_fields = {'slug': ('title',)}
@@ -18,7 +18,7 @@ class PreptimeAdmin(admin.ModelAdmin):
 @admin.register(Mealtime)
 class MealtimeAdmin(admin.ModelAdmin):
     """
-    Ability to manage categories in admin
+    Ability to manage mealtime in admin
     """
     list_display = ('title', 'slug')
     prepopulated_fields = {'slug': ('title',)}
