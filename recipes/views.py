@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Recipe
+from .models import Recipe, Preptime, Mealtime
 from .forms import CommentForm
 
 
@@ -78,3 +78,34 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class PreptimeList(generic.ListView):
+    """View to see categories"""
+    model = Preptime
+    queryset = Preptime.objects.all()
+    template_name = 'category.html'
+
+class MealtimeList(generic.ListView):
+    """View to see categories"""
+    model = Mealtime
+    queryset = Mealtime.objects.all()
+    template_name = 'category.html'
+
+
+# class Preptime(View):
+#     """View to see recipes in specific category"""
+#     def get(self, request, slug, *args, **kwargs):
+#         preptime = get_object_or_404(Preptime, slug=slug)
+#         queryset = Recipe.objects.filter(
+#             category__slug=slug, status=1).order_by('-created_on')
+#         context = {
+#             'recipe_list': queryset,
+#             'Preptime': preptime
+#         }
+
+#         return render(
+#             request,
+#             'Preptime_recipe.html',
+#             context
+#         )
