@@ -13,6 +13,9 @@ class Preptime(models.Model):
     title = models.CharField(max_length=250, default='placeholder', unique=True, null=True)
     slug = models.SlugField(max_length=250, default='placeholder', unique=True, null=True)
 
+    class Meta:
+        verbose_name_plural = 'preptimes'
+
     def __str__(self):
         return self.title
 
@@ -22,6 +25,9 @@ class Mealtime(models.Model):
     title = models.CharField(max_length=250, default='breakfast', unique=True, null=True)
     slug = models.SlugField(max_length=250, default='breakfast', unique=True, null=True)
     mealtime_image = CloudinaryField("mealtime", blank=True)
+
+    class Meta:
+        verbose_name_plural = 'mealtimes'
 
     def __str__(self):
         return self.title
