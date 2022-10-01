@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Preptime, Mealtime
@@ -124,13 +124,15 @@ def CreateRecipe(request):
         if recipe_form.is_valid():
             print('valid')
             recipe_form.instance.author = request.user
-            recipe_form.instance.status = 1
+            recipe_form.instance.status = 0
+            recipe_form.instance.slug = recipe_form.instance.title
             recipe = recipe_form.save(commit=False)
 
             recipe.save()
-            return redirect('index')
+            return redirect('home')
         else:
             print('invalid')
     else:
         recipe_form = RecipeForm()
     return render(request, "create_recipe.html", context)
+    
