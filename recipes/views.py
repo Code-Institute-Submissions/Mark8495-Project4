@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Preptime, Mealtime
-from .forms import CommentForm
+from .forms import CommentForm, RecipeForm
 
 
 class RecipeList(generic.ListView):
@@ -109,3 +109,28 @@ class MealtimeList(generic.ListView):
 #             'Preptime_recipe.html',
 #             context
 #         )
+
+def CreateRecipe(request):
+    """
+    renders share a recipe page
+    """
+    recipe_form = RecipeForm(request.POST or None, request.FILES or None)
+    context = {
+        'recipe_form': recipe_form,
+    }
+
+    if request.method == "POST":
+        recipe_form = RecipeForm(request.POST, request.FILES)
+        if recipe_form.is_valid():
+            print('valid')
+            recipe_form.instance.author = request.user
+            recipe_form.instance.status = 1
+            recipe = recipe_form.save(commit=False)
+
+            recipe.save()
+            return redirect('index')
+        else:
+            print('invalid')
+    else:
+        recipe_form = RecipeForm()
+    return render(request, "create_recipe.html", context)

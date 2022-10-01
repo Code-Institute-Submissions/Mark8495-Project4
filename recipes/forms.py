@@ -8,13 +8,17 @@ class CommentForm(forms.ModelForm):
 
 
 class RecipeForm(forms.ModelForm):
-    model = Recipe
-    fields = (
-        'title',
-        'mealtime',
-        'preptime',
-        'serving_size',
-        'ingredients',
-        'instructions',
-        'featured_image',
-    )
+    class Meta:
+        model = Recipe
+        fields = (
+            'title',
+            'mealtime',
+            'preptime',
+            'serving_size',
+            'ingredients',
+            'instructions',
+            'featured_image',
+        )
+        
+    def __init__(self, *args, **kwargs):
+        super(RecipeForm, self).__init__(*args, **kwargs)
