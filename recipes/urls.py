@@ -7,5 +7,10 @@ urlpatterns = [
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
     path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
     path('create-recipe', views.CreateRecipe, name='create_recipe'),
+    path(
+        'mealtimerecipe/<slug:slug>',
+        views.Mealtime.as_view(),
+        name='mealtime_recipe'
+    ),
     
 ]

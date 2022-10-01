@@ -19,7 +19,7 @@
                                     alt="{{ mealtime.mealtime_image }}">
                             </div>
                             <div class="category-info">
-                                
+                                <a href="{% url 'mealtime_recipe' mealtime.slug %}" class="category-link">
                                     <h2 class="category-card card-title">{{ mealtime.title }}</h2>
                                 </a>
                             </div>

@@ -96,12 +96,12 @@ class MealtimeList(generic.ListView):
 class Mealtime(View):
     """View to see recipes in specific category"""
     def get(self, request, slug, *args, **kwargs):
-        mealtime = get_object_or_404(Mealtime, slug=slug)
+        # mealtime = get_object_or_404(Mealtime, slug=slug)
         queryset = Recipe.objects.filter(
-            category__slug=slug, status=1).order_by('-created_on')
+            mealtime__slug=slug, status=1).order_by('-created_on')
         context = {
             'recipe_list': queryset,
-            'Mealtime': preptime
+            # 'Mealtime': mealtime
         }
 
         return render(
