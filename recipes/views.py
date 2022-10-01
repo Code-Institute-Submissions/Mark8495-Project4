@@ -93,22 +93,23 @@ class MealtimeList(generic.ListView):
     template_name = 'category.html'
 
 
-# class Preptime(View):
-#     """View to see recipes in specific category"""
-#     def get(self, request, slug, *args, **kwargs):
-#         preptime = get_object_or_404(Preptime, slug=slug)
-#         queryset = Recipe.objects.filter(
-#             category__slug=slug, status=1).order_by('-created_on')
-#         context = {
-#             'recipe_list': queryset,
-#             'Preptime': preptime
-#         }
+class Mealtime(View):
+    """View to see recipes in specific category"""
+    def get(self, request, slug, *args, **kwargs):
+        mealtime = get_object_or_404(Mealtime, slug=slug)
+        queryset = Recipe.objects.filter(
+            category__slug=slug, status=1).order_by('-created_on')
+        context = {
+            'recipe_list': queryset,
+            'Mealtime': preptime
+        }
 
-#         return render(
-#             request,
-#             'Preptime_recipe.html',
-#             context
-#         )
+        return render(
+            request,
+            'mealtime_recipe.html',
+            context
+        )
+
 
 def CreateRecipe(request):
     """
