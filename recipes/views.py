@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import Recipe, Preptime, Mealtime
 from .forms import CommentForm, RecipeForm
 
@@ -136,4 +138,11 @@ def CreateRecipe(request):
     else:
         recipe_form = RecipeForm()
     return render(request, "create_recipe.html", context)
+
+
+class EditRecipe(UpdateView):
+    """View to update a recipe"""
+    model = Recipe
+    template_name = 'update_recipe.html'
+    form_class = RecipeForm
     
