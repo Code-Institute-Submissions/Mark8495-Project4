@@ -143,8 +143,9 @@ def CreateRecipe(request):
 class EditRecipe(UpdateView):
     """View to update a recipe"""
     model = Recipe
-    template_name = 'update_recipe.html'
+    template_name = 'edit_recipe.html'
     form_class = RecipeForm
+    success_url = reverse_lazy('user_recipes')
     
 
 class DeleteRecipe(DeleteView):
@@ -152,3 +153,13 @@ class DeleteRecipe(DeleteView):
     model = Recipe
     template_name = 'delete_recipe.html'
     success_url = reverse_lazy('user_recipes')
+
+
+class UserRecipes(generic.ListView):
+    """View to show recipes posted by the user logged in."""
+    def get(self, request):
+        recipes = Recipe.objects.filter(
+            author=request.user, status=1
+        ).order_by('-created_on')
+        print(recipes)
+        return render(request, 'my_recipes.html', {'recipes': recipes})
