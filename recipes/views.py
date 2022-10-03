@@ -146,3 +146,9 @@ class EditRecipe(UpdateView):
     template_name = 'update_recipe.html'
     form_class = RecipeForm
     
+
+class DeleteRecipe(DeleteView):
+    """View to delete recipe"""
+    model = Recipe
+    template_name = 'delete_recipe.html'
+    success_url = reverse_lazy('user_recipes')
