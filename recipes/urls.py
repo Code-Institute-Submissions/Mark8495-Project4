@@ -22,5 +22,10 @@ urlpatterns = [
         views.DeleteRecipe.as_view(),
         name='delete_recipe'
     ),
+    path(
+        'user-recipe',
+        views.UserRecipes.as_view(),
+        name='user_recipes'
+    )
     
 ]

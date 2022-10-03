@@ -82,6 +82,7 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+
 class PreptimeList(generic.ListView):
     """View to see categories"""
     model = Preptime
