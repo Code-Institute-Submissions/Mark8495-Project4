@@ -12,5 +12,15 @@ urlpatterns = [
         views.Mealtime.as_view(),
         name='mealtime_recipe'
     ),
+    path(
+        'edit-recipe/<slug:slug>',
+        views.EditRecipe.as_view(),
+        name='edit_recipe'
+    ),
+    path(
+        'delete-recipe/<slug:slug>',
+        views.DeleteRecipe.as_view(),
+        name='delete_recipe'
+    ),
     
 ]
