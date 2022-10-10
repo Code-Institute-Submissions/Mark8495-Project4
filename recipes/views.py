@@ -72,7 +72,7 @@ class RecipeDetail(View):
 
 class RecipeLike(View):
     
-    def recipe(self, request, slug):
+    def post(self, request, slug):
         recipe = get_object_or_404(Recipe, slug=slug)
         if recipe.likes.filter(id=request.user.id).exists():
             recipe.likes.remove(request.user)
@@ -80,6 +80,8 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+        
+
 
 
 
@@ -129,7 +131,6 @@ def CreateRecipe(request):
             print('valid')
             recipe_form.instance.author = request.user
             recipe_form.instance.status = 0
-            recipe_form.instance.slug = recipe_form.instance.title
             recipe = recipe_form.save(commit=False)
 
             recipe.save()

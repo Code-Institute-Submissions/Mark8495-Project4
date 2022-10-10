@@ -2,10 +2,9 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.RecipeList.as_view(), name='home'),
+    path('liked/<slug:slug>/', views.RecipeLike.as_view(), name='recipe_like'),
     path('category/', views.MealtimeList.as_view(), name='category'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
-    path('like/<slug:slug>', views.RecipeLike.as_view(), name='recipe_like'),
     path('create-recipe', views.CreateRecipe, name='create_recipe'),
     path(
         'mealtimerecipe/<slug:slug>',
@@ -26,6 +25,6 @@ urlpatterns = [
         'user-recipe',
         views.UserRecipes.as_view(),
         name='user_recipes'
-    )
-    
+    ),
+    path('', views.RecipeList.as_view(), name='home'),
 ]
