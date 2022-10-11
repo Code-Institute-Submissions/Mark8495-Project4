@@ -1,5 +1,16 @@
 # **Table Of Contents**
+
 # **Introduction**
+This project is my 4th project in the 5 project course for Code Institute.
+
+This was an idea I had in mind when I began to plan the project. I wanted to create a great website where users could upload and share their recipes that they considered divine.
+I followed the Django Blog Tutorial from Code Institute course. I found going over the blog project great in building my confidence in working with Django.
+
+The main requirement of this project was to build a Full Stack site based on business logic used to control a centrally-owned dataset. This required me as the developer to set up an authentication and provide role-based access to the site's data.
+
+The Site is a great community platform where they can share their favourite dishes, they can also comment and give suggestions to other peoples recipes.
+
+
 # **UX**
 # **Features** 
 ## **Deploymemt**
