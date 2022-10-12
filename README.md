@@ -13,10 +13,21 @@ The Site is a great community platform where they can share their favourite dish
 
 # **UX**
 ## **User Stories**
-
 ### **Users**
+1. As a User I can look through a paginated list of recipes.
+2. As a User I can click and see a users' recipes so that the User can expand their cooking knowledge
+3. As a User I can upload my recipe so I can share it with other users
+4. As a User I can upload images with my recipes so other users can see what the recipe will make
+5. As a User I can see the comments and number of likes so that I can keep up with people's opinion about the post
+6. As a User I can sign in and out of the my account safely and securely
+7. As a User I can comment on posts so that I can interact with other Users
+8. As a User I can see my login status so that I know if they are logged in or not
+9. As a User I can like and unlike posts so I can intereact with the content
+10. As a User I can create, read, update and delete posts so I can manage the content I create
 
 ### **Admin**
+1. As an Admin I can filter, search and delete posts so that I can manage my website content.
+2. As an Admin I can control what comments stay on posts so that I can filter out objectionable comments.
 
 #### **Site Aims**
 
