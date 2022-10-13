@@ -31,8 +31,40 @@ The Site is a great community platform where they can share their favourite dish
 
 #### **Site Aims**
 
-#### **Scope**
+My main aim for the project was to create a site where the users could share their recipes with ease, as well as interact with other people interested in cooking. I wanted to create a community where people interested in cooking or learning to cook.
 
+A user could also use the site to store their recipes for their own use in the future.
+
+The website focuses on the following target audiences:
+
+- **Demographic:**
+    - Food loving people
+    - People looking for more recipes to expand their food knowledge
+    - Cooking enthusiasts
+
+The website needs to enable the user to:
+- Browse recipes
+- Create and set up their account
+- Create and upload their recipes
+- Like and comment on a recipe
+
+The website needs to enable the admin to:
+- Approve recipe uploads and comments
+- Filter through recipes, comments, and users to ease control of the site
+
+#### **Scope**
+A scope was defined to identify what needed to be done to align features with the strategy previously defined. Due to the imbalance of scores above, there will be some trade-offs. The was broken into these categories:
+
+- **Content Requirements**
+    
+    - The UX *must* address these:
+        - A comprehensive list of recipes.
+        - A comprehensive set of instructions with ingredients to follow.
+        - A list of all comments made on a recipe.
+    - The UX *should* accommodate these:
+        - Easy navigation of the site.
+        - Ability to comment and like recipes.
+        
 ### **Structure**
 
  #### **Database Schema**

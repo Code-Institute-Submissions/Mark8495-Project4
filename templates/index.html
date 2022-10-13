@@ -21,6 +21,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ recipe.author }}</p>
+                                    <p class="author">{{recipe.preptime}}</p>
                                 </div>
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug  %}" class="post-link">
