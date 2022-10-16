@@ -64,16 +64,29 @@ A scope was defined to identify what needed to be done to align features with th
     - The UX *should* accommodate these:
         - Easy navigation of the site.
         - Ability to comment and like recipes.
-        
-### **Structure**
 
- #### **Database Schema**
+### **Structure**
+I
+
+#### **Database Schema**
+Here is the database schema for my intial plan for my database tables:
+
+#### **Skeleton**
+
+### **Design**
+
+#### **Typography**
+#### **Colour Scheme**
+#### **Imagery**
+
 # **Features** 
 ## **Design Features**
+Each page of the website features a consistent responsive navigational system:
 
 ## **Exisiting Features**
 
 ## **Features to Implement in the future**
+- A profile page for all users where all their recipes and favorites are shown on one page.
 
 ## **Issues and Bugs**
 
