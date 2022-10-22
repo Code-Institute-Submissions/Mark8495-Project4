@@ -90,7 +90,30 @@ Each page of the website features a consistent responsive navigational system:
 
 ## **Issues and Bugs**
 
+## **Testing**
+### **User Stories**
 
+### **Manual Testing**
+
+#### **Common Elements Testing**
+
+#### **Page Testing**
+
+### **Automated Testing**
+The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Validator Site") service was used to validate the `HTML` and `CSS` code used. The [PEP8 Python Validator](http://pep8online.com/ "Link to the PEP8 Python Validator Site") was used to validate the `Python` code used.
+
+- HTML pages - Code Validation - all HTML pages clear.
+
+- CSS Stylesheet - CSS tested with no errors.
+
+
+#### **User Testing** 
+I asked fellow users on slack to test out my project and listened to any problems they had with the site.
+
+I also asked my family to test it on several different devices and browsers and changed anything that they found wrong with the site.
+
+#### **Browser Validation**
+I tested my project on both chrome and safari.
 ## **Technologies Used**
 ### Main Languages Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "Link to HTML Wiki")
