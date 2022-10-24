@@ -92,12 +92,48 @@ Each page of the website features a consistent responsive navigational system:
 
 ## **Testing**
 ### **User Stories**
-
+1. As a User I can look through a paginated list of recipes so that I can find a recipe that looks good to make.
+    - If the number of recipes page exceeds the number of six then the remainder, starting with the oldest post, will be moved onto the next page. This will continue until there are six or fewer recipe cards on the front page.
+2. As a site user/admin I can see the date a post was made so that I can keep up with the latest cooking trends.
+    - On the recipe detail page below the image of the recipe, it shows the user when the post was uploaded and who it was uploaded by.
+3. As a Site user I can click and load up other users' recipes to expand my cooking knowledge.
+    - On each recipe card on the recipe page it tells the user the name of the recipe and who uploaded it. If the user clicks on the title then they will be directed to the recipe detail page where they will get all the information about that recipe.
+4. As a site user I can upload a recipe so that I can share my ideas with other users. 
+    - There is a separate page on the website that users can click on to which they will then have to fill out a form and submit it before it gets published.
+5. As a Site user I can upload images with my recipes so that other users can see what the recipe will make.
+    -  Once a recipe has been uploaded by a user the image they selected will be the face of the recipe card and on the recipe detail page. If they don't choose an image with their recipe then a placeholder is provided.
+6. As a Site User/Admin I can see the number of likes and comments so that I can keep up with the conversation.
+    - Next to the like button there is a number that indicates how many likes the recipe has gotten. (Should be noted that there is no number count for the number of comments on the recipe. I ran out of time for the project before I could implement it)
+7. As a Site User I can keep my account login information hidden so that my account will be restricted to just me.
+    - When creating an account and filling out the password, the password is protected by asterisks. Users can also log out to prevent anyone from using their account.
+8. As a Site User I can sign in and out of my account so that I can protect my account when I am not using it. 
+    - there are separate pages for logging in and out.
+9. As a Site User I can create and maintain an account so that I can create my post and interact with others.
+    - The user can create an account and manage all of their posts on the user recipe page which can be accessed through the recipe page.
+10. As a Site user I can comment on posts so that I can interact with the content.
+    - Underneath the image and recipe info on recipe detail is a comment section that showcases all comments made on the recipe and a comment form that can only be accessed by registered users.
+11. As a Site user I can see my login status so that I know if I am logged in or not.
+    - The user will know if they are logged in because the navigation bar will tell them to log out rather than log in. When logged in users use the home page the main title on the page greets them with the username that they selected when creating the account.
+12. As a Site User I can like and unlike posts/comments so that I can interact with the content.
+    - A user that is registered and logged in can like and unlike a recipe on the recipe detail page.
+13. As a Site User / Admin I can create, read, update and delete posts so that I can manage my blog content.
+    - Both admin and user can create, read and update posts on the site.
 ### **Manual Testing**
 
 #### **Common Elements Testing**
+- Navigation works on every page.
+- All social links in the footer open a new page following the correct link.
 
 #### **Page Testing**
+- Once logged in, the navigation login changes to logout.
+- Links to Create recipe and Recipe page on the home page work/
+- All recipe cards have clickable links that direct the users to the recipe detail page featuring all the information they need. 
+- The edit and delete buttons that are available to a user if they are logged in and are the ones who created the recipe all work and will direct them to the correct page.
+- The my recipes page brings the user to my-recipes page and shows only their recipes.
+- The comment form and submit button work and once submitted an alert pops up where the comment form was to tell users their comment has been published.
+- The login, logout and signup pages work with no issues.
+- The categories when clicked will direct users to the correct page.
+- All pages are responsive and are styled for large medium and small screens.
 
 ### **Automated Testing**
 The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Validator Site") service was used to validate the `HTML` and `CSS` code used. The [PEP8 Python Validator](http://pep8online.com/ "Link to the PEP8 Python Validator Site") was used to validate the `Python` code used.
