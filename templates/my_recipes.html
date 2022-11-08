@@ -21,21 +21,22 @@
                         <div class="post-banner">
                             <div class="image-container">
                                 {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-img-top recipe-image"
-                                    src="https://res.cloudinary.com/dvgol9ade/image/upload/v1647892595/static/french-style-country-loaf_xejbox.jpg"
-                                    alt="loaf-of-bread">
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dvgol9ade/image/upload/v1647892595/static/french-style-country-loaf_xejbox.jpg">
                                 {% else %}
-                                <img class="card-img-top recipe-image" src=" {{ recipe.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
                                 {% endif %}
-                            </div>
-                            <div class="recipe-info">
-                                <a href="{% url 'recipe_detail' slug=recipe.slug %}" class="recipe-link">
-                                    <h2 class="card-title">{{ recipe.title }}</h2>
-                                </a>
                                 <div class="image-flash">
-                                    <p class="author">Uploaded by: {{ recipe.author }}
+                                    <p class="author">Author: {{ recipe.author }}</p>
+                                    <p class="author">{{recipe.preptime}}</p>
                                 </div>
                             </div>
+                            <a href="{% url 'recipe_detail' recipe.slug  %}" class="post-link">
+                                <h2 class="card-title">{{ recipe.title }}</h2>
+                            </a>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
+                                {{ recipe.number_of_likes }}</p>
                         </div>
                     </div>
                 </div>
