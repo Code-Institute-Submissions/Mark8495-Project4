@@ -1,4 +1,4 @@
-# **Table Of Contents**
+[Link to deployed site](https://.herokuapp.com/)
 
 # **Introduction**
 This project is my 4th project in the 5 project course for Code Institute.
@@ -65,30 +65,44 @@ A scope was defined to identify what needed to be done to align features with th
         - Easy navigation of the site.
         - Ability to comment and like recipes.
 
-### **Structure**
-I
 
 #### **Database Schema**
-Here is the database schema for my intial plan for my database tables:
+I wanted to keep my database clean and simple.
 
+The recipe model has two foreign keys being the preptime and mealtime, each being individual models, allowing me to create categories to sort the recipes.
+The rest of the model is mainly text fields and images
 #### **Skeleton**
+All wireframes mockups were created in balsamiq:
+Website Wireframe
 
-### **Design**
+![wireframeWebsite](media/readme-images/website%20wireframe.png)
 
-#### **Typography**
-#### **Colour Scheme**
-#### **Imagery**
+Phone Wireframe
+
+![wireframePhone](media/readme-images/Phone%20wireframe.png)
+
+
 
 # **Features** 
-## **Design Features**
-Each page of the website features a consistent responsive navigational system:
-
-## **Exisiting Features**
-
+- Navigation bar which is featured on every page throughout the site to allow users easy access should they want to go to a different page.
+- Social icons appear on the footer of every page.
+- Recipe cards that appear on the recipes page, the recipe cards only give out the title of the recipe and the user who uploaded it, this is to not make it overcomplicated to the user.
+- Recipe form on the create page which is only available to users that are registered and logged in. Unregistered users can go onto the create page but they will just be shown a message prompting them to signup or log in.
+- Personal recipes created only by the user logged in will be found in my recipes which can be located by clicking 'click here' on the recipes page. The users will be taken to a separate page where recipe cards of their recipes are shown.
+- Comment form which appears on the recipe detail page and is accessible by clicking on a recipe that they want. the comment form however only shows up for registered users. Unregistered users can see comments left by other users though. Once a user has submitted a comment the page will reload and when they scroll down an alert message where the comment form once was saying the comment has been published and underneath the comment will appear. 
+- There is a like button situated next to the information of who the author of the recipe is and when it was uploaded in recipe detail. It is in the shape of the heart and beside it is a number that shows the number of likes that specific recipe has. If the user has liked the recipe but changed their mind, all they would need to do is click on the heart again to unlike it. 
+- The home page greets the user personally with the first header on the page which will include the username that they signed up with. The home page does feature some functionality to the website though. It has links that will direct users to either the create page or the recipe page. Below both of them is a contact box the users can find out information including a contact number, email address, and an address.
+- The edit/delete buttons are only available to the users that are logged in and are the creator of the recipe. The buttons are found underneath the recipe information on the recipe detail page.
+- Sign in page is designed to allow a user to log in if already registered. If they are not then there is a link to take them to the signup page.
+- Sign out page is designed to allow users to log out of their account. If the user does sign out then they will be redirected to the home page.
+- Sign up page is designed to allow new users to create an account which will give them more access to the site. They will create their profile with a username, password that needs to be repeated to ensure is correct and an optional email address if the user would like to. 
 ## **Features to Implement in the future**
 - A profile page for all users where all their recipes and favorites are shown on one page.
 
 ## **Issues and Bugs**
+Bug I faced an issue when deploying my project to Heroku with my CSS not loading in:
+
+The solution for this was to turn debug = True to False.
 
 ## **Testing**
 ### **User Stories**
